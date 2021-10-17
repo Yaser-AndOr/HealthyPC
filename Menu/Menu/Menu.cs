@@ -15,10 +15,23 @@ namespace Menu
         private static PerformanceCounter uso = new PerformanceCounter("Processor information", "% Processor time", @"_Total");
         public void medidor()
         {
-            TempUs.Text = "" + ((int)pcPerf.NextValue() - 273);
-            CPUUs.Text = "" + ((int)uso.NextValue()) + "%";
+            try
+            {
+                TempUs.Text = "" + ((int)pcPerf.NextValue() - 273);
+            }
+            catch (Exception)
+            {
+                TempUs.Text = "NaN";
+            }
+            try
+            {
+                CPUUs.Text = "" + ((int)uso.NextValue()) + "%";
+            }
+            catch (Exception)
+            {
+                TempUs.Text = "NaN";
+            }
         }
-
         public Menu()
         {
             InitializeComponent();
