@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CB92337-7897-42C9-BB89-CBA13E0EB247}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HealthyPC</RootNamespace>
+    <AssemblyName>HealthyPC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeForce.Entities, Version=2.0.4231.17897, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeForceLib.Utilities.2.0\lib\CodeForce.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeForce.Enums, Version=2.0.4231.17896, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeForceLib.Utilities.2.0\lib\CodeForce.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeForce.Extensions, Version=2.0.4231.17897, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeForceLib.Utilities.2.0\lib\CodeForce.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeForce.Utilities, Version=2.0.4231.18318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeForceLib.Utilities.2.0\lib\CodeForce.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeForceLib.Utilities.2.0\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MembershipAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MembershipAdapter.0.7.1\lib\net40\MembershipAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OleDb, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.6.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivEleg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivEleg.Designer.cs">
+      <DependentUpon>ActivEleg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseNuevo.Designer.cs">
+      <DependentUpon>BaseNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch.cs" />
+    <Compile Include="Benchmark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Benchmark.Designer.cs">
+      <DependentUpon>Benchmark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cache.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cache.Designer.cs">
+      <DependentUpon>Cache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carga.Designer.cs">
+      <DependentUpon>Carga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cnc.cs" />
+    <Compile Include="Existente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Existente.Designer.cs">
+      <DependentUpon>Existente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Programar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programar.Designer.cs">
+      <DependentUpon>Programar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\RoleSettings.cs" />
+    <Compile Include="Samples\SampleRoleRepository.cs" />
+    <Compile Include="Samples\UserSettings.cs" />
+    <EmbeddedResource Include="ActivEleg.resx">
+      <DependentUpon>ActivEleg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseNuevo.resx">
+      <DependentUpon>BaseNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Benchmark.resx">
+      <DependentUpon>Benchmark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cache.resx">
+      <DependentUpon>Cache.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carga.resx">
+      <DependentUpon>Carga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Existente.resx">
+      <DependentUpon>Existente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programar.resx">
+      <DependentUpon>Programar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
